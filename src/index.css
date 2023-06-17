@@ -1,0 +1,259 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
+    monospace;
+}
+
+.header__cont {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header__logo {
+  font-size: 1.875rem;
+  color: #0290ff;
+  font-family: Montserrat, sans-serif;
+  font-weight: bold;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header__link {
+  font-family: Montserrat, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.header__avatar-cont {
+  border: 1px solid #e2e2e2;
+  border-radius: 50%;
+  padding: 0.8rem;
+  margin-left: auto;
+}
+
+.header__avatar {
+  width: 1.063rem;
+  height: 1.063rem;
+  color: #0290ff;
+}
+
+.book {
+  display: flex;
+  padding: 0 2rem;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.book__info {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  width: 25%;
+}
+
+.book__info h4 {
+  opacity: 0.5;
+  font-family: Montserrat, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #121212;
+}
+
+.book__info h2 {
+  font-family: RobotoSlab, serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.book__info h6 {
+  font-family: RobotoSlab, serif;
+  font-size: 1.1rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.book__interaction {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.book__btn {
+  padding: 0.5rem;
+  border: none;
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  background-color: #fff;
+  color: #4386bf;
+  cursor: pointer;
+}
+
+.book__btn:hover {
+  transform: scale(1.05);
+}
+
+.book__percentage {
+  width: 200px;
+  place-items: center;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.percent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.percent h5 {
+  font-size: 2.5rem;
+  opacity: 0.5;
+  font-weight: 300;
+}
+
+.percent p {
+  opacity: 0.5;
+}
+
+.book__progress {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.book__progress h4 {
+  opacity: 0.5;
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #121212;
+}
+
+.book__progress h5 {
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.form > button {
+  font-family: RobotoSlab, serif;
+  width: 15%;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #0290ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.book__progress button {
+  margin-top: 2rem;
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #0290ff;
+  transition: all 0.2s ease-in-out;
+}
+
+.book__progress button:hover {
+  transform: scale(1.05);
+  background-color: #fff;
+  color: #0290ff;
+}
+
+.form__cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form__input {
+  width: 60%;
+  padding: 0.5rem;
+  border: 1px solid #e2e2e2;
+  border-radius: 0.5rem;
+  font-family: RobotoSlab, serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #121212;
+}
