@@ -1,12 +1,15 @@
 import React, { useRef, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import SelectCategory from './SelectCategory';
+import { addBook } from '../redux/books/booksSlice';
 import { categories } from '../Constants/constants';
 
-const Form = ({ setBooks }) => {
-  const [selected, setSelected] = useState(categories[0]);
+const Form = () => {
+  const dispatch = useDispatch();
   const formRef = useRef(null);
+  const [selected, setSelected] = useState(categories[0]); // <-- Declare the 'selected' state
 
   const handleSubmit = (e, selectedVal) => {
     e.preventDefault();
@@ -20,7 +23,7 @@ const Form = ({ setBooks }) => {
       category: selectedVal,
       id,
     };
-    setBooks((prevBooks) => [...prevBooks, newBook]);
+    dispatch(addBook(newBook));
     formRef.current.reset();
   };
 
@@ -43,7 +46,7 @@ const Form = ({ setBooks }) => {
 };
 
 Form.propTypes = {
-  setBooks: PropTypes.func.isRequired,
+  // setBooks: PropTypes.func.isRequired,
 };
 
 export default Form;

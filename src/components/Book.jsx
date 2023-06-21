@@ -1,12 +1,22 @@
 import React from 'react';
-import { CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import { removeBook } from '../redux/books/booksSlice';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Book = ({
-  title, author, category, id,
+  title,
+  author,
+  category,
+  id,
 }) => {
+  const dispatch = useDispatch();
   const categoryName = category.name;
+
+  const handleRemove = () => {
+    dispatch(removeBook(id));
+  };
 
   return (
     <li key={id} className="book">
@@ -18,7 +28,7 @@ const Book = ({
           <button type="button" className="book__btn">
             Comments
           </button>
-          <button type="button" className="book__btn">
+          <button type="button" className="book__btn" onClick={handleRemove}>
             Remove
           </button>
           <button type="button" className="book__btn">

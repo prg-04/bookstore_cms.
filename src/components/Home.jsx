@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import Book from './Book';
 import Form from './Form';
 
 const Home = () => {
-  const [books, setBooks] = useState([]);
-
-  useEffect(() => {
-    const storedBooks = localStorage.getItem('books');
-    if (storedBooks) {
-      setBooks(JSON.parse(storedBooks));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('books', JSON.stringify(books));
-  }, [books]);
+  const books = useSelector((state) => state.books);
 
   return (
     <>
@@ -32,11 +22,11 @@ const Home = () => {
             id={book.id}
             title={book.title}
             author={book.author}
-            category={book.category} // Add category prop here
+            category={book.category}
           />
         ))}
       </ul>
-      <Form setBooks={setBooks} />
+      <Form />
     </>
   );
 };
