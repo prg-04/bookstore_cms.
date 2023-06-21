@@ -36,9 +36,23 @@ const Form = () => {
         className="form"
         onSubmit={(e) => handleSubmit(e, selected)}
       >
-        <input className="form__input" type="text" placeholder="Book title" />
-        <input className="form__input" type="text" placeholder="Author" />
-        <SelectCategory selected={selected} setSelected={setSelected} />
+        <input
+          className="form__input"
+          type="text"
+          placeholder="Book title"
+          required
+        />
+        <input
+          className="form__input"
+          type="text"
+          placeholder="Author"
+          required
+        />
+        <SelectCategory
+          selected={selected}
+          setSelected={setSelected}
+          required
+        />
         <button type="submit">Add book</button>
       </form>
     </div>
