@@ -70,7 +70,7 @@ Use the following Commands:
 
 Install this project with:
 
-- git clone https://github.com/prg-04/bookstore_cms
+- git clone https://github.com/prg-04/bookstore_cms.
 - Next run npm install --legacy-peer-deps to install the dependencies
 
 ### Usage
@@ -106,7 +106,7 @@ You can deploy this project using:
 
 Contributions and feedback from the GitHub community are welcome to enhance and expand the functionality of this CMS. Join us in building an efficient and user-friendly book management solution.
 
-Feel free to check the [issues page](http://github.com/prg-04/bookstore_cms/issues/).
+Feel free to check the [issues page](http://github.com/prg-04/bookstore_cms./issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
